@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
-<body class="bg-[#F5F8FF]">
+<body>
     <!-- header area start -->
     <header class="px-6 py-4">
         <div class=" mx-auto flex items-center justify-between">
@@ -28,10 +28,12 @@
             </div>
 
             <!-- Navigation -->
-            <nav class="flex items-center gap-8 text-sm text-gray-700">
-                <a href="#" class="font-semibold text-black">Home</a>
-                <a href="#" class="hover:text-black">Shop</a>
-                <a href="#" class="hover:text-black">About us</a>
+            <nav class="flex items-center gap-8 text-sm text-gray-700 ">
+                <div class="nav-items">
+                    <a href="#" class="font-semibold text-black">Home</a>
+                    <a href="#" class="hover:text-black">Shop</a>
+                    <a href="#" class="hover:text-black">About us</a>
+                </div>
 
                 <!-- Cart -->
                 <div class="flex items-center gap-1">
@@ -56,7 +58,7 @@
     <!-- header area end -->
     <main>
         <!-- banner section start  -->
-        <section class="px-6 py-12">
+        <section class="px-6 py-12 banner-section">
             <div class=" mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
                 <div class="md:w-1/2 md:text-center md:text-left">
                     <h1 class="text-[65px] font-semibold">
@@ -70,7 +72,7 @@
                         for any occasion.
                     </p>
                 </div>
-                <div class="md:w-1/2 flex justify-end">
+                <div class="md:w-1/2 flex justify-end banner-image">
                     <img src="./assets/images/hero-flower.png" alt="hero-flower" class="w-full max-w-md ">
                 </div>
 
@@ -78,7 +80,7 @@
         </section>
         <!-- banner section end  -->
         <!-- section title start -->
-        <section class=" px-6 text-center">
+        <section class=" px-6 text-center common-section-title">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-[50px] font-bold">
                     <span class="text-orange-600">Our</span> <span class="text-black">Plants</span>
@@ -189,12 +191,12 @@
         <section class="px-6 mx-auto py-12 px-4 flex flex-col md:flex-row items-center gap-[60px]">
             <div class="relative w-full md:w-1/2">
                 <img src="./assets/images/flower-store.png" alt="Flower Shop" class="w-600 h-[597px]">
-                <div class="absolute top-[-80px] right-[-80px]">
+                <div class="absolute top-[-80px] right-[-80px] trusted-badge hidden md:block">
                     <img src="./assets/images/trusted-badge.png" alt="trusted-badge.png" class="w-50 h-50">
                 </div>
             </div>
-            <div class="w-full md:w-1/2 h-[540px]">
-                <h2 class="text-[50px] font-bold mb-4">Flower & Plants <br> Lover</h2>
+            <div class="w-full md:w-1/2 h-[540px] plant-lover-content">
+                <h2 class="text-[50px] font-bold mb-4 plant-lover-heading">Flower & Plants <br> Lover</h2>
                 <ol class="space-y-4 text-gray-600">
                     <li class="py-[20px]">
                         • Indulge your senses with the beauty and fragrance of our fresh flower shop.
@@ -204,7 +206,7 @@
                         • Indulge your senses with the beauty and fragrance of our fresh flower shop.
                         From classic roses to exotic blooms, we offer a wide variety of fresh.
                     </li>
-                    <li >
+                    <li>
                         • Indulge your senses with the beauty and fragrance of our fresh flower shop.
                         From classic roses to exotic blooms, we offer a wide variety of fresh.
                     </li>
@@ -215,7 +217,7 @@
 
         <!-- plant lover section end -->
         <!-- section title start -->
-        <section class=" px-6 text-center">
+        <section class=" px-6 text-center common-section-title">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-[50px] font-bold">
                     <span class="text-orange-600">Latest</span> <span class="text-black">Deals</span>
@@ -228,7 +230,7 @@
         </section>
         <!-- section title end -->
         <!-- latest deal section start -->
-        <section class=" w-[100%] px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-x-5 mx-auto">
+        <section class=" w-[100%] px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-5 mx-auto">
             <div class="flex flex-col gap-4">
                 <div class="relative  rounded-lg overflow-hidden">
                     <img src="./assets/images/deal-ana.png" alt="Bloom Plant" class="w-full h-full object-cover" />
@@ -265,11 +267,10 @@
             style="background-image: url('./assets/images/news-letter-bg.png');">
             <div class="absolute inset-0 bg-black/5"></div>
             <div class="relative text-center text-white px-4 w-full max-w-2xl">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">Join the <span class="text-orange-400">colorful</span>
-                    Bunch</h2>
-                <form class="flex flex-col sm:flex-row items-center justify-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Join the colorful Bunch</h2>
+                <form class="flex sm:flex-row items-center justify-center">
                     <input type="email" placeholder="Write email"
-                        class="w-full sm:w-2/3 px-4 py-2  bg-white text-black focus:outline-none " />
+                        class=" sm:w-2/3 px-4 py-2  bg-white text-black focus:outline-none " />
                     <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2">
                         Subscribe
                     </button>
@@ -282,7 +283,7 @@
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
                 <div class="flex items-center space-x-2 mb-3">
-                    <img src="./assets/images/logo.png" alt="Logo" class="h-10 " />
+                    <img src="./assets/images/image.png" alt="Logo" class=" " />
                 </div>
                 <p class="text-sm text-gray-600 max-w-xs">
                     Indulge your senses with the beauty and fragrance of our fresh flower shop.
@@ -305,14 +306,10 @@
                 <p>Help Center</p>
             </div>
             <div class="flex justify-start md:justify-end space-x-4">
-                <a href="#"><img src="./assets/images/icon-linkedin.png" class="w-6 h-6"
-                        alt="LinkedIn" /></a>
-                <a href="#"><img src="./assets/images/icon-twitter.png" class="w-6 h-6"
-                        alt="twitter" /></a>
-                <a href="#"><img src="./assets/images/icon-facebook.png" class="w-6 h-6"
-                        alt="Facebook" /></a>
-                <a href="#"><img src="./assets/images/icon-youtube.png" class="w-6 h-6"
-                        alt="YouTube" /></a>
+                <a href="#"><img src="./assets/images/icon-linkedin.png" class="w-6 h-6" alt="LinkedIn" /></a>
+                <a href="#"><img src="./assets/images/icon-twitter.png" class="w-6 h-6" alt="twitter" /></a>
+                <a href="#"><img src="./assets/images/icon-facebook.png" class="w-6 h-6" alt="Facebook" /></a>
+                <a href="#"><img src="./assets/images/icon-youtube.png" class="w-6 h-6" alt="YouTube" /></a>
             </div>
 
         </div>
